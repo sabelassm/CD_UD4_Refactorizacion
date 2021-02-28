@@ -7,8 +7,11 @@ import java.text.DecimalFormat;
  * @author profesor
  */
 public class Main {
+		/**
+		 * @param args main args
+		 */
     public static void main(String[] args) {
-        Circulo circulo = new Circulo(37,43,2.5);
+        Circulito circulo = new Circulito(37,43,2.5);
         String salida =
                 "La coordenada X es "+circulo.obtenerX()+
                 "\nLa coordenada Y es "+circulo.obtenerY()+
@@ -19,7 +22,7 @@ public class Main {
         DecimalFormat dosDigitos = new DecimalFormat("0.00");
         salida+="\nEl diámetro es "+dosDigitos.format(circulo.obtenerDiametro());
         salida+="\nLa circunferencia es "+dosDigitos.format(circulo.obtenerCircunferencia());
-        salida+="\nEl área es "+dosDigitos.format(circulo.obtenerArea());
+        salida+="\nEl área es "+dosDigitos.format(circulo.obtenerAreaCirculo());
         System.out.println(salida);
         
         System.out.println(salida);
