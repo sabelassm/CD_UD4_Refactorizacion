@@ -4,136 +4,136 @@ import static org.junit.Assert.*;
 
 /**
  * Pruebas para la clase Circulo
- * @author profesor
+ * @author Alvaro
  */
 public class CirculoTest {
 
     /**
-     * Test of establecerX method, of class Circulo.
+     * Test del metodo getCoordenadaX , de la clase clase Circulo.
      */
     @Test
-    public void testEstablecerX() {
-        System.out.println("establecerX");
+    public void testgetCoordenadaX() {
+        System.out.println("getCoordenadaX");
         int valorX = 0;
-        Circulo instance = new Circulo();
-        instance.establecerX(valorX);
+        Circulito instance = new Circulito();
+        instance.getCoordenadaX();
     }
 
     /**
-     * Test of establecerY method, of class Circulo.
+     * Test del metodo getCoordenaday , de la clase clase Circulo.
      */
     @Test
-    public void testEstablecerY() {
-        System.out.println("establecerY");
+    public void testgetCoordenadaY() {
+        System.out.println("getCoordenadaY");
         int valorY = 0;
-        Circulo instance = new Circulo();
-        instance.establecerY(valorY);
+        Circulito instance = new Circulito();
+        instance.getCoordenadaY();
     }
 
     /**
-     * Test of establecerRadio method, of class Circulo.
+     * Test del metodo setradio , de la clase clase Circulo. 
      */
     @Test
-    public void testEstablecerRadio() {
-        System.out.println("establecerRadio");
-        Circulo instance = new Circulo();
-        instance.establecerRadio(0.0);
-        instance.establecerRadio(0.1);
-        instance.establecerRadio(-0.1);
+    public void testsetRadio() {
+        System.out.println("setRadio");
+        Circulito instance = new Circulito();
+        instance.setRadio(0.0);
+        instance.setRadio(0.1);
+        instance.setRadio(-0.1);
     }
 
     /**
-     * Test of obtenerX method, of class Circulo.
+     * Test del metodo Coordenada x , de la clase clase Circulo.
      */
     @Test
-    public void testObtenerX() {
-        System.out.println("obtenerX");
-        Circulo instance = new Circulo(0,0,0.1);
+    public void testCoordenadaX() {
+        System.out.println("getCoordenadaX");
+        Circulito instance = new Circulito(0,0,0.1);
         int expResult = 0;
-        int result = instance.obtenerX();
+        int result = instance.getCoordenadaX();
         assertEquals(expResult, result);
     }
 
 
     /**
-     * Test of obtenerY method, of class Circulo.
+     * Test del metodo coordenada y , de la clase clase Circulo.
      */
     @Test
-    public void testObtenerY() {
-        System.out.println("obtenerY");
-        Circulo instance = new Circulo(0,0,0.1);
+    public void testCoordenadaY() {
+        System.out.println("getCoordenadaY");
+        Circulito instance = new Circulito(0,0,0.1);
         int expResult = 0;
-        int result = instance.obtenerY();
+        int result = instance.getCoordenadaY();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of obtenerRadio method, of class Circulo.
+     * Test del metodo obtener radio, de la clase clase Circulo.
      */
     @Test
     public void testObtenerRadio() {
         System.out.println("obtenerRadio");
-        Circulo instance = new Circulo(0,0,0.1);
-        double result = instance.obtenerRadio();
+        Circulito instance = new Circulito(0,0,0.1);
+        double result = instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(0.1);
-        result= instance.obtenerRadio();
+        instance.setRadio(0.1);
+        result= instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(-0.1);
-        result= instance.obtenerRadio();
+        instance.setRadio(-0.1);
+        result= instance.getRadio();
         assertEquals(0.0, result,0);
     }
 
     /**
-     * Test of obtenerDiametro method, of class Circulo.
+     * Test del metodo obtener diametro, de la clase clase Circulo.
      */
     @Test
     public void testObtenerDiametro() {
         System.out.println("obtenerDiametro");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double result = instance.obtenerDiametro();
         assertEquals(0.2, result,0);
     }
 
     /**
-     * Test of obtenerCircunferencia method, of class Circulo.
+     * Test del metodo obtener circunferencia, de la clase clase Circulo.
      */
     @Test
     public void testObtenerCircunferencia() {
         System.out.println("obtenerCircunferencia");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double expResult = 0.6283185;
         double result = instance.obtenerCircunferencia();
         assertEquals(expResult, result,1e-6);
     }
 
     /**
-     * Test of obtenerArea method, of class Circulo.
+     *Test del metodo obtener area, de la clase clase Circulo.
      */
     @Test
     public void testObtenerArea() {
         System.out.println("obtenerArea");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double expResult = 0.0314159;
-        double result = instance.obtenerArea();
+        double result = instance.obtenerAreacirculo();
         assertEquals(expResult, result,1e-6);
     }
 
     
     /**
-     * Test of trasladarCentro method, of class Circulo.
+     * Test del metodo trasladar centro, de la clase clase Circulo.
      */
     @Test
     public void testTrasladarCentro() {
         System.out.println("trasladarCentro");
-        Circulo instance = new Circulo();
-        int resultx=instance.obtenerX();
-        int resulty=instance.obtenerY();
+        Circulito instance = new Circulito();
+        int resultx=instance.getCoordenadaX();
+        int resulty=instance.getCoordenadaY();
         instance.trasladarCentro();
-        int resultnx = instance.obtenerX();
-        int resultny = instance.obtenerY();
+        int resultnx = instance.getCoordenadaX();
+        int resultny = instance.getCoordenadaY();
         assertEquals(resultx+5, resultnx);
         assertEquals(resulty+6, resultny);
     }
