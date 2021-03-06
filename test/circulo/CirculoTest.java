@@ -9,61 +9,61 @@ import static org.junit.Assert.*;
 public class CirculoTest {
 
     /**
-     * Test of establecerX method, of class Circulo.
+     * Test of getCoordenadaX method, of class Circulo.
      */
     @Test
-    public void testEstablecerX() {
-        System.out.println("establecerX");
+    public void testgetCoordenadaX() {
+        System.out.println("getCoordenadaX");
         int valorX = 0;
         Circulo instance = new Circulo();
-        instance.establecerX(valorX);
+        instance.getCoordenadaX(valorX);
     }
 
     /**
-     * Test of establecerY method, of class Circulo.
+     * Test of getCoordenadaY method, of class Circulo.
      */
     @Test
-    public void testEstablecerY() {
-        System.out.println("establecerY");
+    public void testgetCoordenadaY() {
+        System.out.println("getCoordenadaY");
         int valorY = 0;
         Circulo instance = new Circulo();
-        instance.establecerY(valorY);
+        instance.getCoordenadaY(valorY);
     }
 
     /**
-     * Test of establecerRadio method, of class Circulo.
+     * Test of setRadio method, of class Circulo.
      */
     @Test
-    public void testEstablecerRadio() {
-        System.out.println("establecerRadio");
+    public void testsetRadio() {
+        System.out.println("setRadio");
         Circulo instance = new Circulo();
-        instance.establecerRadio(0.0);
-        instance.establecerRadio(0.1);
-        instance.establecerRadio(-0.1);
+        instance.setRadio(0.0);
+        instance.setRadio(0.1);
+        instance.setRadio(-0.1);
     }
 
     /**
-     * Test of obtenerX method, of class Circulo.
+     * Test of getCoordenadaX method, of class Circulo.
      */
     @Test
-    public void testObtenerX() {
-        System.out.println("obtenerX");
+    public void testCoordenadaX() {
+        System.out.println("getCoordenadaX");
         Circulo instance = new Circulo(0,0,0.1);
         int expResult = 0;
-        int result = instance.obtenerX();
+        int result = instance.getCoordenadaX();
         assertEquals(expResult, result);
     }
 
 
     /**
-     * Test of obtenerY method, of class Circulo.
+     * Test of getCoordenadaY method, of class Circulo.
      */
     @Test
-    public void testObtenerY() {
-        System.out.println("obtenerY");
+    public void testCoordenadaY() {
+        System.out.println("getCoordenadaY");
         Circulo instance = new Circulo(0,0,0.1);
         int expResult = 0;
-        int result = instance.obtenerY();
+        int result = instance.getCoordenadaY();
         assertEquals(expResult, result);
     }
 
@@ -74,15 +74,15 @@ public class CirculoTest {
     public void testObtenerRadio() {
         System.out.println("obtenerRadio");
         Circulo instance = new Circulo(0,0,0.1);
-        double result = instance.obtenerRadio();
+        double result = instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(0.1);
-        result= instance.obtenerRadio();
+        instance.setRadio(0.1);
+        result= instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(-0.1);
-        result= instance.obtenerRadio();
+        instance.setRadio(-0.1);
+        result= instance.getRadio();
         assertEquals(0.0, result,0);
     }
 
@@ -129,11 +129,11 @@ public class CirculoTest {
     public void testTrasladarCentro() {
         System.out.println("trasladarCentro");
         Circulo instance = new Circulo();
-        int resultx=instance.obtenerX();
-        int resulty=instance.obtenerY();
+        int resultx=instance.getCoordenadaX();
+        int resulty=instance.getCoordenadaY();
         instance.trasladarCentro();
-        int resultnx = instance.obtenerX();
-        int resultny = instance.obtenerY();
+        int resultnx = instance.getCoordenadaX();
+        int resultny = instance.getCoordenadaY();
         assertEquals(resultx+5, resultnx);
         assertEquals(resulty+6, resultny);
     }
