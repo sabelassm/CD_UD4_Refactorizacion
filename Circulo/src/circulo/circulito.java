@@ -1,10 +1,11 @@
 package circulo;
 /**
- * Mantemos package circulo ao estar asociado ao proxecto con ese nome.
+ * Cambiamos package Circulo ao estar asociado ao proxecto con ese nome.
  */
 /**
  * Pruebas de refactorización en NetBeans con la clase circulito
  * @author profesor
+ * @version version_02 modificada por alumna
  */
 public class circulito {
 
@@ -12,6 +13,8 @@ public class circulito {
     /**
      * Renomeamos os campos X e Y a coordenadaX e coordenadaY. 
      * Creamos a constante LIMITERADIO
+     * @since edición por alumna
+     * @param coordenadas X e Y e LIMITERADIO
      */
     private static final double LIMITERADIO = 0.0;
     private int coordenadaX;
@@ -48,7 +51,6 @@ public class circulito {
     
     /** 
      * Devolve o radio do círculo.
-     * @param valorRadio
      */
     public void establecerRadio(double valorRadio) {
 
