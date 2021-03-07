@@ -15,8 +15,8 @@ public class CirculoTest {
     public void testEstablecerX() {
         System.out.println("establecerX");
         int valorX = 0;
-        Circulo instance = new Circulo();
-        instance.establecerX(valorX);
+        Circulito instance = new Circulito();
+        instance.setX(valorX);
     }
 
     /**
@@ -26,8 +26,8 @@ public class CirculoTest {
     public void testEstablecerY() {
         System.out.println("establecerY");
         int valorY = 0;
-        Circulo instance = new Circulo();
-        instance.establecerY(valorY);
+        Circulito instance = new Circulito();
+        instance.setY(valorY);
     }
 
     /**
@@ -36,7 +36,7 @@ public class CirculoTest {
     @Test
     public void testEstablecerRadio() {
         System.out.println("establecerRadio");
-        Circulo instance = new Circulo();
+        Circulito instance = new Circulito();
         instance.establecerRadio(0.0);
         instance.establecerRadio(0.1);
         instance.establecerRadio(-0.1);
@@ -48,9 +48,9 @@ public class CirculoTest {
     @Test
     public void testObtenerX() {
         System.out.println("obtenerX");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         int expResult = 0;
-        int result = instance.obtenerX();
+        int result = instance.getX();
         assertEquals(expResult, result);
     }
 
@@ -61,9 +61,9 @@ public class CirculoTest {
     @Test
     public void testObtenerY() {
         System.out.println("obtenerY");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         int expResult = 0;
-        int result = instance.obtenerY();
+        int result = instance.getY();
         assertEquals(expResult, result);
     }
 
@@ -73,7 +73,7 @@ public class CirculoTest {
     @Test
     public void testObtenerRadio() {
         System.out.println("obtenerRadio");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double result = instance.obtenerRadio();
         assertEquals(0.1, result,0);
 
@@ -92,7 +92,7 @@ public class CirculoTest {
     @Test
     public void testObtenerDiametro() {
         System.out.println("obtenerDiametro");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double result = instance.obtenerDiametro();
         assertEquals(0.2, result,0);
     }
@@ -103,7 +103,7 @@ public class CirculoTest {
     @Test
     public void testObtenerCircunferencia() {
         System.out.println("obtenerCircunferencia");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double expResult = 0.6283185;
         double result = instance.obtenerCircunferencia();
         assertEquals(expResult, result,1e-6);
@@ -115,9 +115,9 @@ public class CirculoTest {
     @Test
     public void testObtenerArea() {
         System.out.println("obtenerArea");
-        Circulo instance = new Circulo(0,0,0.1);
+        Circulito instance = new Circulito(0,0,0.1);
         double expResult = 0.0314159;
-        double result = instance.obtenerArea();
+        double result = instance.obtenerAreaCirculo();
         assertEquals(expResult, result,1e-6);
     }
 
@@ -128,12 +128,12 @@ public class CirculoTest {
     @Test
     public void testTrasladarCentro() {
         System.out.println("trasladarCentro");
-        Circulo instance = new Circulo();
-        int resultx=instance.obtenerX();
-        int resulty=instance.obtenerY();
+        Circulito instance = new Circulito();
+        int resultx=instance.getX();
+        int resulty=instance.getY();
         instance.trasladarCentro();
-        int resultnx = instance.obtenerX();
-        int resultny = instance.obtenerY();
+        int resultnx = instance.getX();
+        int resultny = instance.getY();
         assertEquals(resultx+5, resultnx);
         assertEquals(resulty+6, resultny);
     }
