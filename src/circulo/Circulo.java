@@ -1,73 +1,86 @@
-package circulo;
+package Circulito;
 
 /**
- * Pruebas de refactorización en NetBeans con la clase Circulo
+ * Pruebas de refactorización en NetBeans con la clase Circulito
  * @author profesor
  */
-public class Circulo {
+public class Circulito {
 
-    private int x;
-    private int y;
+    private static final double LIMITERADIO = 0.0;
+    private int coordenadaX;
+    private int coordenadaY;
     private double radio;
 
-    public Circulo() {
+    public Circulito() {
     }
 
-    public Circulo(int valorX, int valorY, double valorRadio) {
-        x = valorX;
-        y = valorY;
+    public Circulito(int valorcoordenadaX, int valorY, double valorRadio) {
+        coordenadaX = valorcoordenadaX;
+        coordenadaY = valorY;
         establecerRadio(valorRadio);
     }
 
-    public void establecerX(int valorX) {
-        x=valorX;
-    }
-
-    public int obtenerX() {
-        return x;
-    }
-
-    public void establecerY(int valorY) {
-        y=valorY;
-    }
-
-    public int obtenerY() {
-        return y;
-    }
-
+    
+    /** 
+     * @param valorRadio
+     */
     public void establecerRadio(double valorRadio) {
 
-        radio=(valorRadio < 0.0 ? 0.0 : valorRadio);
+        radio=(valorRadio < LIMITERADIO ? 0.0 : valorRadio);
     }
 
+    
+    /** 
+     * @return double
+     */
     public double obtenerRadio() {
         return radio;
     }
 
+    
+    /** 
+     * @return double
+     */
     public double obtenerDiametro() {
         return radio * 2;
     }
 
 
+    
+    /** 
+     * @return double
+     */
     public double obtenerCircunferencia() {
         return Math.PI * obtenerDiametro();
     }
 
-    public double obtenerArea() {
+    
+    /** 
+     * @return double
+     */
+    public double ObtenerAreaCirculo() {
         return Math.PI * radio * radio;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
-        return "Centro = [" + x + "," + y + "]; Radio = " + radio;
+        return "Centro = [" + coordenadaX + "," + coordenadaY + "]; Radio = " + radio;
     }
 
     public void trasladarCentro(){
-        x=x + 5;
-        y=y + 5;
+        coordenadaX=coordenadaX + 5;
+        coordenadaY=coordenadaY + 5;
     }
     
+    
+    /** 
+     * @return int
+     */
     public int a(){
-        return x;
+        return coordenadaX;
     }
 }
